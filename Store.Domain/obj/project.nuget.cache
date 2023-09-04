@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "97KOe6zRI6R0ZaBvvD8RsS5Yv/3mV3BFPoB3ed9hUprS3zIl2lmx7PlbRtPjUu4E6alGo3nel82pU40yYGeCdg==",
+  "dgSpecHash": "ce0NIyf7Jt4b5eEmewgjSEyapZaCAU+R0UHpzrjDzoxgzTJ+OZSVUl0Gv1MYzjJGg1YCHJ8Wc6NQTsWfryToJw==",
   "success": true,
   "projectFilePath": "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\Store.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Danilo\\.nuget\\packages\\flunt\\1.0.3\\flunt.1.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
