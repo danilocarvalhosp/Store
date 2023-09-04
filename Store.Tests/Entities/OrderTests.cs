@@ -44,5 +44,14 @@ namespace Store.Tests.Domain
             order.Cancel();
             Assert.AreEqual(order.Status, EOrderStatus.Canceled);
         }
+
+        [TestMethod]
+        [TestCategory("Domain")]
+        public void DadoUmNovoItemSemProdutoOMesmoNãoDeveSerAdicionado()
+        {
+            var order = new Order(_customer, 0, null);
+            order.AddItem(null, 10);
+            Assert.AreEqual(order.Items.Count, 0);
+        }
     }
 }
