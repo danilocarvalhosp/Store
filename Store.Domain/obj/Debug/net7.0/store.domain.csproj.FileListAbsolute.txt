@@ -1,0 +1,12 @@
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\bin\Debug\net7.0\store.domain.deps.json
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\bin\Debug\net7.0\store.domain.dll
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\bin\Debug\net7.0\store.domain.pdb
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.csproj.AssemblyReference.cache
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.AssemblyInfoInputs.cache
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.AssemblyInfo.cs
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.csproj.CoreCompileInputs.cache
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.dll
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\refint\store.domain.dll
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\store.domain.pdb
+E:\Cursos\C#\Balta.IO\Balta\Store\store.domain\obj\Debug\net7.0\ref\store.domain.dll

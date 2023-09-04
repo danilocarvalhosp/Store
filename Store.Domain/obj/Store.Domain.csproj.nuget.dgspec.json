@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\Store.Domain.csproj": {}
+    "E:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\store.domain\\store.domain.csproj": {}
   },
   "projects": {
-    "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\Store.Domain.csproj": {
+    "E:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\store.domain\\store.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\Store.Domain.csproj",
-        "projectName": "Store.Domain",
-        "projectPath": "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\Store.Domain.csproj",
+        "projectUniqueName": "E:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\store.domain\\store.domain.csproj",
+        "projectName": "store.domain",
+        "projectPath": "E:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\store.domain\\store.domain.csproj",
         "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-        "outputPath": "e:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\Store.Domain\\obj\\",
+        "outputPath": "E:\\Cursos\\C#\\Balta.IO\\Balta\\Store\\store.domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
