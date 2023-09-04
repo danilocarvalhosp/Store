@@ -35,5 +35,14 @@ namespace Store.Tests.Domain
             order.Pay(10);
             Assert.AreEqual(order.Status, EOrderStatus.WaitingDelivery);
         }
+
+        [TestMethod]
+        [TestCategory("Domain")]
+        public void DadoUmPedidoCanceladoSeuStatusDeveSerCancelado()
+        {
+            var order = new Order(_customer, 0, null);
+            order.Cancel();
+            Assert.AreEqual(order.Status, EOrderStatus.Canceled);
+        }
     }
 }
