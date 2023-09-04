@@ -53,5 +53,14 @@ namespace Store.Tests.Domain
             order.AddItem(null, 10);
             Assert.AreEqual(order.Items.Count, 0);
         }
+
+        [TestMethod]
+        [TestCategory("Domain")]
+        public void DadoUmNovoItemComQuantidadeZeroOuMenorOMesmoNãoDeveSerAdicionado()
+        {
+            var order = new Order(_customer, 0, null);
+            order.AddItem(_product, 0);
+            Assert.AreEqual(order.Items.Count, 0);
+        }
     }
 }
