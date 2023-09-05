@@ -24,7 +24,7 @@ namespace Store.Domain.Commands
         public string? PromoCode { get; set; }
         public IList<CreateOrderItemCommand> Items { get; set; }
 
-        public void Validade()
+        public void Validate()
         {
             AddNotifications(new Contract()
                 .Requires()

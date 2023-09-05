@@ -18,7 +18,7 @@ namespace Store.Domain.Commands
         public Guid Product { get; set; }
         public int Quantity { get; set; }
 
-        public void Validade()
+        public void Validate()
         {
             AddNotifications(new Contract()
                 .Requires()
