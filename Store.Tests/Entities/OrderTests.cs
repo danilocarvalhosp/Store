@@ -108,5 +108,13 @@ namespace Store.Tests.Domain
             order.AddItem(_product, 6);
             Assert.AreEqual(order.Total(), 60);
         }
+
+        [TestMethod]
+        [TestCategory("Domain")]
+        public void DadoUmPedidoSemClienteOMesmoDeveSerInvalido()
+        {
+            var order = new Order(null, 10, _discount);
+            Assert.AreEqual(order.Valid, false);
+        }    
     }
 }
