@@ -4,6 +4,7 @@ using Store.Domain.Commands.Interface;
 using Store.Domain.Entities;
 using Store.Domain.Handlers.Interfaces;
 using Store.Domain.Repositories;
+using Store.Domain.Utils;
 
 namespace Store.Domain.Handlers
 {
