@@ -99,5 +99,14 @@ namespace Store.Tests.Domain
             order.AddItem(_product, 5);
             Assert.AreEqual(order.Total(), 50);
         }
+
+        [TestMethod]
+        [TestCategory("Domain")]
+        public void DadoUmaTaxaDeEntregaDe10oValorDoPedidoDeveSer60()
+        {
+            var order = new Order(_customer, 10, _discount);
+            order.AddItem(_product, 6);
+            Assert.AreEqual(order.Total(), 60);
+        }
     }
 }
