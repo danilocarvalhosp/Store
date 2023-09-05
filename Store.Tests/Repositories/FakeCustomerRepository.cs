@@ -1,11 +1,14 @@
+using Store.Domain.Repositories;
+using Store.Domain.Entities;
+
 namespace Store.Tests.Repositories
 {
     public class FakeCustomerRepository : ICustomerRepository
     {
-        public FakeCustomerRepository Get(string document)
+        public Customer Get(string document)
         {
             if (document == "12345678911")
-                return new FakeCustomerRepository("Bruce Wayne", "batman@balta.io");
+                return new Customer("Bruce Wayne", "batman@balta.io");
 
             return null;
         }

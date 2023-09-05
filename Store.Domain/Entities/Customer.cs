@@ -1,4 +1,4 @@
-using Store.Domain.Repositories.Interfaces;
+using Store.Domain.Repositories;
 
 namespace Store.Domain.Entities
 {
