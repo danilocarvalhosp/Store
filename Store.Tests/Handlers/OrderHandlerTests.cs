@@ -1,5 +1,7 @@
 using Store.Domain.Repositories;
 using Store.Tests.Repositories;
+using Store.Domain.Commands;
+using Store.Domain.Handlers;
 
 namespace Store.Tests.Handlers
 {
@@ -25,42 +27,99 @@ namespace Store.Tests.Handlers
         [TestCategory("Handlers")]
         public void DadoUmClienteInexistenteOPedidoNaoDeveSerGerado()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = null;
+            command.ZipCode = "13411080";
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, false);
         }
 
         [TestMethod]
         [TestCategory("Handlers")]
         public void DadoUmCepInvalidoOPedidoNaoDeveSerGerado()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = "";
+            command.ZipCode = null;
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, false);
         }
 
         [TestMethod]
         [TestCategory("Handlers")]
         public void DadoUmPromoCodeInexistenteOPedidoDeveSerGeradoNormalmente()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = "";
+            command.ZipCode = "13411080";
+            command.PromoCode = null;
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, false);
         }
 
         [TestMethod]
         [TestCategory("Handlers")]
         public void DadoUmPedidoSemItensOMesmoNaoDeveSerGerado()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = "";
+            command.ZipCode = "13411080";
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 0));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 0));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, false);
         }
 
         [TestMethod]
         [TestCategory("Handlers")]
         public void DadoUmComandoInvalidoOPedidoNaoDeveSerGerado()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = "";
+            command.ZipCode = "13411080";
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, false);
         }    
         
         [TestMethod]
         [TestCategory("Handlers")]
         public void DadoUmComandoValidoOPedidoDeveSerGerado()
         {
-            Assert.Fail();
+            var command = new CreateOrderCommand();
+            command.Customer = "";
+            command.ZipCode = "13411080";
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            var handler = new OrderHandler(
+                _customerRepository,
+                _deliveryFeeRepository,
+                _discountRepository,
+                _productRepository,
+                _orderRepository
+            );
+
+            handler.Handle(command);
+            Assert.AreEqual(handler.Valid, true);
         }        
     }
 }
